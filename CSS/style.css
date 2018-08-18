@@ -1,3 +1,55 @@
+:root {
+    --active-key: grey;
+}
+
 body {
     background-color: green;
+}
+
+#noteC:hover {
+    fill: var(--active-key);
+}
+
+#noteD:hover {
+    fill: var(--active-key);
+}
+
+#noteE:hover {
+    fill: var(--active-key);
+}
+
+#noteF:hover {
+    fill: var(--active-key);
+}
+
+#noteG:hover {
+    fill: var(--active-key);
+}
+
+#noteA:hover {
+    fill: var(--active-key);
+}
+
+#noteB:hover {
+    fill: grey;
+}
+
+#noteC2:hover {
+    fill: var(--active-key);
+}
+
+#noteD2:hover {
+    fill: var(--active-key);
+}
+
+#noteE2:hover {
+    fill: var(--active-key);
+}
+
+#noteF2:hover {
+    fill: var(--active-key);
+}
+
+#noteG2:hover {
+    fill: var(--active-key);
 }
