@@ -4,6 +4,7 @@
 * HTML
 * CSS
 * javaScripts
+* jQuery
 * WebAudio API
 * SVG
 
