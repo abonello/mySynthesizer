@@ -17,3 +17,7 @@ I will also link the computer keyboard to the synthesizer to be enable it to be 
 Later I might add octave buttons that will transpose both the displayed keyboard and the triggered notes from the computer keyboard up and down in octave intervals.
 
 Another addirion that I would like to implement is some control on attack time and overall envelope and harmonic content of the notes. The simplest might be adding odd and even harmonics, controlling an overall volume for the set and perhaps a generic envelope such as falling off volumes as frequency of harmonics increase.
+
+
+## SVG Treble Clef
+Found two svg treble clefs on [wikimedia](https://commons.wikimedia.org/wiki/File:G-clef.svg). They are public domain. I will use one of them. To decide later.
