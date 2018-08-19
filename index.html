@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-
-    <svg width="1112" height="440" style="background-color:aqua">
+    <svg width="1112" height="800" style="background-color:aqua">
+        <!-- Keyboard -->
         <rect id="background" x="5" y="20" width="1102" height="400" fill="#535353" />
+        <!-- White Keys -->
         <rect id="noteC" x="5" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
         <rect id="noteCtop" x="5" y="20" width="90" height="7" fill="white"/>
         <rect id="noteD" x="97" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
@@ -35,7 +36,29 @@
         <rect id="noteF2top" x="925" y="20" width="90" height="10" fill="white"/>
         <rect id="noteG2" x="1017" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
         <rect id="noteG2top" x="1017" y="20" width="90" height="10" fill="white"/>
-        
+
+        <!-- Stave -->
+        <g id="stave">
+            <line id="line5" x1="0" y1="500" x2="1112" y2="500" stroke="black" stroke-width="3px" />
+            <line id="line4" x1="0" y1="515" x2="1112" y2="515" stroke="black" stroke-width="3px" />
+            <line id="line3" x1="0" y1="530" x2="1112" y2="530" stroke="black" stroke-width="3px" />
+            <line id="line2" x1="0" y1="545" x2="1112" y2="545" stroke="black" stroke-width="3px" />
+            <line id="line1" x1="0" y1="560" x2="1112" y2="560" stroke="black" stroke-width="3px" />
+
+
+            <!-- Treble clef -->
+            <g id="trebleClef">
+                <circle cx="30" cy="545" r="7"/>
+                <path d="M30 545 A10, 20 0 0, 1   45 545 A15, 12 0 0, 1   30 560  A15, 15 0 0, 1   12 545
+                A30, 60 0 0, 1   30 510  A5, 12 0 1, 0   32 480 A2, 12 0 0, 0   30 500
+                " stroke="black" stroke-width="4" fill="none"/>
+                <path d="M30 500 L 30 565 A10, 30 0 0, 1   15 585" stroke="black" stroke-width="4" fill="none"/>
+                <circle cx="17" cy="583" r="5"/>
+            </g>
+
+        </g>
+
+                
     </svg>
     <p id="answer"></p>
 
