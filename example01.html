@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example 1</title>
+    <style>
+        .controls {
+  width: 400px;
+  position: relative;
+  vertical-align: middle;
+  height: 44px;
+}
+
+.button {
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+.right {
+  width: 50%;
+  font: 14px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  position: absolute;
+  right: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.right span {
+  vertical-align: middle;
+}
+
+.right input {
+  vertical-align: baseline;
+}
+
+.left {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.left span, .left input {
+  vertical-align: middle;
+}
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <div class="left">
+            <div id="playButton" class="button">
+                ▶️
+            </div>
+        </div>
+        <div class="right">
+            <span>Volume: </span>
+            <input type="range" min="0.0" max="1.0" step="0.01" value="0.8" name="volume" id="volumeControl">
+        </div>
+    </div>
+    <p>Use the button above to start and stop the tones, and the volume control to
+        change the volume of the notes E and G in the chord.</p>
+
+    <script>
+        //  Initialize the global variables
+        // The AudioContext in which all the audio nodes live.
+        let context = null;
+        // References to the play button and volume control elements.
+        let playButton = null;
+        let volumeControl = null;
+        // The three OscillatorNodes used to generate the chord.
+        let oscNode1 = null;
+        let oscNode2 = null;
+        let oscNode3 = null;
+        // The ConstantSourceNode used to control the values of gainNode2 and gainNode3 together.
+        let constantNode = null;
+        // The three GainNode instances which provide the volume levels for each of the three oscillators. gainNode2 and gainNode3 will be linked together to have the same, adjustable, value using the ConstantSourceNode.
+        let gainNode1 = null;
+        let gainNode2 = null;
+        let gainNode3 = null;
+        // A Boolean that we'll use to keep track of whether or not we're currently playing the tones.
+        let playing = false;
+
+
+        function setup() {
+            context = new (window.AudioContext || window.webkitAudioContext)();
+
+            playButton = document.querySelector("#playButton");
+            volumeControl = document.querySelector("#volumeControl");
+
+            playButton.addEventListener("click", togglePlay, false);
+            volumeControl.addEventListener("input", changeVolume, false);
+
+            gainNode1 = context.createGain();
+            gainNode1.gain.value = 0.5;
+
+            gainNode2 = context.createGain();
+            gainNode3 = context.createGain();
+            gainNode2.gain.value = gainNode1.gain.value;
+            gainNode3.gain.value = gainNode1.gain.value;
+            volumeControl.value = gainNode1.gain.value;
+
+            constantNode = context.createConstantSource();
+            constantNode.connect(gainNode2.gain);
+            constantNode.connect(gainNode3.gain);
+            constantNode.start();
+
+            gainNode1.connect(context.destination);
+            gainNode2.connect(context.destination);
+            gainNode3.connect(context.destination);
+        }
+
+        window.addEventListener("load", setup, false);
+
+        function togglePlay(event) {
+            if (playing) {
+                playButton.innerHTML = "▶️";
+                stopOscillators();
+            } else {
+                playButton.innerHTML = "⏸";
+                startOscillators();
+            }
+        }
+
+        function changeVolume(event) {
+            constantNode.offset.value = volumeControl.value;
+        }
+
+        function startOscillators() {
+            oscNode1 = context.createOscillator();
+            oscNode1.type = "sine";
+            oscNode1.frequency.value = 261.625565300598634; // middle C
+            oscNode1.connect(gainNode1);
+
+            oscNode2 = context.createOscillator();
+            oscNode2.type = "sine";
+            oscNode2.frequency.value = 329.627556912869929; // E
+            oscNode2.connect(gainNode2);
+
+            oscNode3 = context.createOscillator();
+            oscNode3.type = "sine";
+            oscNode3.frequency.value = 391.995435981749294 // G
+            oscNode3.connect(gainNode3);
+
+            oscNode1.start();
+            oscNode2.start();
+            oscNode3.start();
+            
+            playing = true;
+        }
+
+        function stopOscillators() {
+            oscNode1.stop();
+            oscNode2.stop();
+            oscNode3.stop();
+            playing = false;
+        }
+    
+    </script>
+</body>
+</html>
