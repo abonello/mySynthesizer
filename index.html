@@ -9,33 +9,35 @@
 </head>
 <body>
     <svg width="1112" height="600" style="background-color:aqua">
-        <!-- Keyboard -->
-        <rect id="background" x="5" y="20" width="1102" height="400" fill="#535353" />
-        <!-- White Keys -->
-        <rect id="noteC" x="5" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteCtop" x="5" y="20" width="90" height="7" fill="white"/>
-        <rect id="noteD" x="97" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteDtop" x="97" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteE" x="189" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteEtop" x="189" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteF" x="281" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteFtop" x="281" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteG" x="373" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteGtop" x="373" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteA" x="465" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteAtop" x="465" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteB" x="557" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteBtop" x="557" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteC2" x="649" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteC2top" x="649" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteD2" x="741" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteD2top" x="741" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteE2" x="833" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteE2top" x="833" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteF2" x="925" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteF2top" x="925" y="20" width="90" height="10" fill="white"/>
-        <rect id="noteG2" x="1017" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-        <rect id="noteG2top" x="1017" y="20" width="90" height="10" fill="white"/>
+        <g>
+            <!-- Keyboard -->
+            <rect id="background" x="5" y="20" width="1102" height="400" fill="#535353" />
+            <!-- White Keys -->
+            <rect id="noteC" x="5" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteCtop" x="5" y="20" width="90" height="7" fill="white"/>
+            <rect id="noteD" x="97" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteDtop" x="97" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteE" x="189" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteEtop" x="189" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteF" x="281" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteFtop" x="281" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteG" x="373" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteGtop" x="373" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteA" x="465" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteAtop" x="465" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteB" x="557" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteBtop" x="557" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteC2" x="649" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteC2top" x="649" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteD2" x="741" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteD2top" x="741" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteE2" x="833" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteE2top" x="833" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteF2" x="925" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteF2top" x="925" y="20" width="90" height="10" fill="white"/>
+            <rect id="noteG2" x="1017" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
+            <rect id="noteG2top" x="1017" y="20" width="90" height="10" fill="white"/>
+        </g>
 
         <!-- Stave -->
         <g id="stave">
@@ -113,7 +115,10 @@
 
                 
     </svg>
-    <p id="answer"></p>
+    <h3>GUI Keyboard:</h3>
+    <p id="answer"> </p>
+    <h3>Computer Keyboard:</h3>
+    <p id="keyPressed"> </p>
 
     <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -229,6 +234,107 @@
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
+        });
+
+
+        var keyPressed = function() {
+            return this;
+        }
+
+        
+
+        // $("body").keydown(function(event) {
+        //     alert(JSON.stringify(event));
+        // });
+
+        $( "body" ).keypress(function(e) {
+            // console.log( "Handler for .keypress() called." );
+            var code = e.keyCode || e.which;
+            // alert(code);
+            if(code == 97 || code == 65) { 
+                $("#keyPressed").text("C");
+                $("#mysemibreve").css("transform","translate(300px,494px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 575; })
+                    .attr('y2', function () { return 575; });
+            }
+            else if(code == 115 || code == 83) { 
+                $("#keyPressed").text("D");
+                $("#mysemibreve").css("transform","translate(300px,487px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 100 || code == 68) { 
+                $("#keyPressed").text("E");
+                $("#mysemibreve").css("transform","translate(300px,479px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 102 || code == 70) { 
+                $("#keyPressed").text("F");
+                $("#mysemibreve").css("transform","translate(300px,472px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 103 || code == 71) { 
+                $("#keyPressed").text("G");
+                $("#mysemibreve").css("transform","translate(300px,464px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 104 || code == 72) { 
+                $("#keyPressed").text("A");
+                $("#mysemibreve").css("transform","translate(300px,457px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 106 || code == 74) { 
+                $("#keyPressed").text("B");
+                $("#mysemibreve").css("transform","translate(300px,449px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 107 || code == 75) { 
+                $("#keyPressed").text("C'");
+                $("#mysemibreve").css("transform","translate(300px,442px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 108 || code == 76) { 
+                $("#keyPressed").text("D'");
+                $("#mysemibreve").css("transform","translate(300px,434px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 59 || code == 58) { 
+                $("#keyPressed").text("E'");
+                $("#mysemibreve").css("transform","translate(300px,427px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 39 || code == 34) { 
+                $("#keyPressed").text("F'");
+                $("#mysemibreve").css("transform","translate(300px,419px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
+            else if(code == 92 || code == 124) { 
+                $("#keyPressed").text("G'");
+                $("#mysemibreve").css("transform","translate(300px,412px)  scale(0.58)");
+                $("#ledgerline")
+                    .attr('y1', function () { return 620; })
+                    .attr('y2', function () { return 620; });
+            }
         });
     </script>
     
