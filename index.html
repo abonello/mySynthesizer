@@ -56,6 +56,9 @@
                 <circle cx="17" cy="583" r="5"/>
             </g>
 
+            <circle id="semibreve" cx="150" cy="620" r="7" stroke="black" stroke-width="3" fill="none" />
+            <line id="ledgerline" x1=140 y1="620" x2="160" y2="620" stroke="black" stroke-width="3" fill="none"/>
+
         </g>
 
                 
@@ -70,40 +73,88 @@
     <script>
         // GUI Keyboard respond to clicks
         $("#noteC").click(function() {
-            $("#answer").text("C")
+            $("#answer").text("C");
+            $("#semibreve").attr('cy', function () { return 575; });
+            $("#ledgerline")
+                .attr('y1', function () { return 575; })
+                .attr('y2', function () { return 575; });
         })
         $("#noteD").click(function() {
-            $("#answer").text("D")
+            $("#answer").text("D");
+            $("#semibreve").attr('cy', function () { return 567; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteE").click(function() {
-            $("#answer").text("E")
+            $("#answer").text("E");
+            $("#semibreve").attr('cy', function () { return 560; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteF").click(function() {
-            $("#answer").text("F")
+            $("#answer").text("F");
+            $("#semibreve").attr('cy', function () { return 552; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteG").click(function() {
-            $("#answer").text("G")
+            $("#answer").text("G");
+            $("#semibreve").attr('cy', function () { return 545; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteA").click(function() {
-            $("#answer").text("A")
+            $("#answer").text("A");
+            $("#semibreve").attr('cy', function () { return 537; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteB").click(function() {
-            $("#answer").text("B")
+            $("#answer").text("B");
+            $("#semibreve").attr('cy', function () { return 530; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteC2").click(function() {
-            $("#answer").text("C'")
+            $("#answer").text("C'");
+            $("#semibreve").attr('cy', function () { return 522; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteD2").click(function() {
-            $("#answer").text("D'")
+            $("#answer").text("D'");
+            $("#semibreve").attr('cy', function () { return 515; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteE2").click(function() {
-            $("#answer").text("E'")
+            $("#answer").text("E'");
+            $("#semibreve").attr('cy', function () { return 507; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteF2").click(function() {
-            $("#answer").text("F'")
+            $("#answer").text("F'");
+            $("#semibreve").attr('cy', function () { return 500; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
         $("#noteG2").click(function() {
-            $("#answer").text("G'")
+            $("#answer").text("G'");
+            $("#semibreve").attr('cy', function () { return 492; });
+            $("#ledgerline")
+                .attr('y1', function () { return 620; })
+                .attr('y2', function () { return 620; });
         })
     </script>
     
