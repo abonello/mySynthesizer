@@ -24,4 +24,5 @@ Found two svg treble clefs on [wikimedia](https://commons.wikimedia.org/wiki/Fil
 
 ## SVG Semibreve
 
-Found at [wikimedia](https://commons.wikimedia.org/wiki/File:1-1_note_semibreve.svg). License -  Creative Commons Attribution-Share Alike 3.0 Unported license.
+~~Found at [wikimedia](https://commons.wikimedia.org/wiki/File:1-1_note_semibreve.svg). License -  Creative Commons Attribution-Share Alike 3.0 Unported license.~~  
+Changed the semibreve to one with no white space around it. (Based on previous semibreve.) I am using this one.

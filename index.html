@@ -96,13 +96,15 @@
                 transform="matrix(-1.08512,-2.036848e-2,2.036848e-2,-1.08512,90.68868,135.0572)" />
          </g>
 
-         <g id="semibreve" transform="translate(250, 440) scale(0.58)">
+        <g
+            id="mysemibreve"
+            transform="translate(300,427) scale(0.58)">
             <path
             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-            d="M 36.425204,104.88119 C 25.756184,104.88119 17.112704,110.07537 17.112704,116.44369 C 17.112704,122.81202 25.756194,127.97497 36.425204,127.97494 C 47.094224,127.97494 55.768944,122.81202 55.768954,116.44369 C 55.768954,110.07536 47.094224,104.88117 36.425204,104.88119 z M 31.706454,106.97494 C 34.480794,106.93885 37.898804,108.02436 41.112704,110.19369 C 46.826304,114.05026 49.692844,119.85839 47.518954,123.13119 C 45.345074,126.40401 38.951304,125.92527 33.237704,122.06869 C 27.524114,118.21212 24.657564,112.40399 26.831454,109.13119 C 27.782534,107.69933 29.548634,107.00301 31.706454,106.97494 z "
-            id="path7229" />
+            d="M 19.3125,126.90625 C 8.64348,126.90625 0,132.10043 0,138.46875 0,144.83708 8.64349,150.00003 19.3125,150 c 10.66902,0 19.34374,-5.16292 19.34375,-11.53125 0,-6.36833 -8.67473,-11.56252 -19.34375,-11.5625 z M 14.59375,129 c 2.77434,-0.0361 6.19235,1.04942 9.40625,3.21875 5.7136,3.85657 8.58014,9.6647 6.40625,12.9375 -2.17388,3.27282 -8.56765,2.79408 -14.28125,-1.0625 -5.71359,-3.85657 -8.58014,-9.6647 -6.4062503,-12.9375 C 10.66983,129.72439 12.43593,129.02807 14.59375,129 Z"/>
         </g>
-        <line id="ledgerline" x1="255" y1="620" x2="285" y2="620" stroke="black" stroke-width="3" fill="none"/>
+
+        <line id="ledgerline" x1="296" y1="620" x2="326" y2="620" stroke="black" stroke-width="3" fill="none"/>
 
             <!-- <circle id="semibreve" cx="150" cy="620" r="7" stroke="black" stroke-width="3" fill="none" /> -->
             <!-- <line id="ledgerline" x1=140 y1="620" x2="160" y2="620" stroke="black" stroke-width="3" fill="none"/> -->
@@ -123,7 +125,8 @@
         $("#noteC").click(function() {
             $("#answer").text("C");
             // $("#semibreve").attr('cy', function () { return 575; });
-            $("#semibreve").css("transform","translate(250px,507px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,507px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,494px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 575; })
                 .attr('y2', function () { return 575; });
@@ -131,7 +134,8 @@
         $("#noteD").click(function() {
             $("#answer").text("D");
             // $("#semibreve").attr('cy', function () { return 567; });
-            $("#semibreve").css("transform","translate(250px,500px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,500px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,487px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -139,7 +143,8 @@
         $("#noteE").click(function() {
             $("#answer").text("E");
             // $("#semibreve").attr('cy', function () { return 560; });
-            $("#semibreve").css("transform","translate(250px,493px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,493px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,479px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -147,7 +152,8 @@
         $("#noteF").click(function() {
             $("#answer").text("F");
             // $("#semibreve").attr('cy', function () { return 552; });
-            $("#semibreve").css("transform","translate(250px,485px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,485px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,472px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -155,7 +161,8 @@
         $("#noteG").click(function() {
             $("#answer").text("G");
             // $("#semibreve").attr('cy', function () { return 545; });
-            $("#semibreve").css("transform","translate(250px,478px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,478px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,464px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -163,7 +170,8 @@
         $("#noteA").click(function() {
             $("#answer").text("A");
             // $("#semibreve").attr('cy', function () { return 537; });
-            $("#semibreve").css("transform","translate(250px,470px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,470px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,457px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -171,7 +179,8 @@
         $("#noteB").click(function() {
             $("#answer").text("B");
             // $("#semibreve").attr('cy', function () { return 530; });
-            $("#semibreve").css("transform","translate(250px,463px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,463px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,449px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -179,7 +188,8 @@
         $("#noteC2").click(function() {
             $("#answer").text("C'");
             // $("#semibreve").attr('cy', function () { return 522; });
-            $("#semibreve").css("transform","translate(250px,455px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,455px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,442px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -187,7 +197,8 @@
         $("#noteD2").click(function() {
             $("#answer").text("D'");
             // $("#semibreve").attr('cy', function () { return 515; });
-            $("#semibreve").css("transform","translate(250px,447px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,447px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,434px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -195,7 +206,8 @@
         $("#noteE2").click(function() {
             $("#answer").text("E'");
             // $("#semibreve").attr('cy', function () { return 507; });
-            $("#semibreve").css("transform","translate(250px,440px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,440px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,427px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -203,7 +215,8 @@
         $("#noteF2").click(function() {
             $("#answer").text("F'");
             // $("#semibreve").attr('cy', function () { return 500; });
-            $("#semibreve").css("transform","translate(250px,432px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,432px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,419px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
@@ -211,7 +224,8 @@
         $("#noteG2").click(function() {
             $("#answer").text("G'");
             // $("#semibreve").attr('cy', function () { return 492; });
-            $("#semibreve").css("transform","translate(250px,425px)  scale(0.58)");
+            // $("#semibreve").css("transform","translate(250px,425px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(300px,412px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
