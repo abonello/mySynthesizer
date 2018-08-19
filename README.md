@@ -21,3 +21,7 @@ Another addirion that I would like to implement is some control on attack time a
 
 ## SVG Treble Clef
 Found two svg treble clefs on [wikimedia](https://commons.wikimedia.org/wiki/File:G-clef.svg). They are public domain. I will use one of them. To decide later.
+
+## SVG Semibreve
+
+Found at [wikimedia](https://commons.wikimedia.org/wiki/File:1-1_note_semibreve.svg). License -  Creative Commons Attribution-Share Alike 3.0 Unported license.
