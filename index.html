@@ -383,15 +383,15 @@
             else if(code == 106 || code == 74) { $("#noteB").toggleClass("hovered"); }
             else if(code == 107 || code == 75) { $("#noteC2").toggleClass("hovered"); }
             else if(code == 108 || code == 76) { $("#noteD2").toggleClass("hovered"); }
-            else if(code == 59 || code == 58) { $("#noteE2").toggleClass("hovered"); }
-            else if(code == 39 || code == 34) { $("#noteF2").toggleClass("hovered"); }
-            else if(code == 92 || code == 124) { $("#noteG2").toggleClass("hovered");}
+            else if(code == 186) { $("#noteE2").toggleClass("hovered"); }
+            else if(code == 222) { $("#noteF2").toggleClass("hovered"); }
+            else if(code == 220) { $("#noteG2").toggleClass("hovered");}
         });
         // var frequency = 0;
         $( "body" ).keypress(function(e) {
             // console.log( "Handler for .keypress() called." );
             var code = e.keyCode || e.which;
-            alert(code);
+            // alert(code);
             if(code == 97 || code == 65) { 
                 $("#keyPressed").text("C");
                 $("#mysemibreve").css("transform","translate(300px,494px)  scale(0.58)");
