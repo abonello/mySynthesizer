@@ -56,7 +56,7 @@ body {
 
 #testSlider {
     position: fixed;
-    right: 50px;
+    left: 1080px;
     top: 450px;
 }
 
@@ -67,4 +67,14 @@ input[type=range][orient=vertical]
     width: 8px;
     height: 100px;
     padding: 0 5px;
+}
+
+#wavType {
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 110px;
+    padding: 3px;
+    position:fixed;
+    left: 930px;
+    top: 450px;
 }
