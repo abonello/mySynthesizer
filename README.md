@@ -1,5 +1,8 @@
 # Synthesizer
 
+[GitHub Repository](https://github.com/abonello/mySynthesizer)  
+[Deployment](https://abonello.github.io/mySynthesizer/)  
+
 ## Technologies
 * HTML
 * CSS
