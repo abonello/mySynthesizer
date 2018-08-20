@@ -10,6 +10,13 @@ body {
     fill: var(--active-key);
 }
 
+.clickedBlackKey {
+    /* background-image: url("BlackKey2small.png"); */
+    background-color: red;
+    width: 60px;
+    height: 300px;
+}
+
 #noteC:hover, #noteC.hovered {
     fill: var(--active-key);
 }
