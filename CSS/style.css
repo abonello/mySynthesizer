@@ -53,3 +53,18 @@ body {
 #noteG2:hover {
     fill: var(--active-key);
 }
+
+#testSlider {
+    position: fixed;
+    right: 50px;
+    top: 450px;
+}
+
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 100px;
+    padding: 0 5px;
+}
