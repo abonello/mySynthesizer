@@ -9,38 +9,23 @@
 </head>
 <body>
     <svg width="1112" height="600" style="background-color:aqua">
-        <g>
-            <!-- Keyboard -->
+        <g id="Keyboard">
             <rect id="background" x="5" y="20" width="1102" height="400" fill="#535353" />
-            <!-- White Keys -->
-            <g>
+            <g id="whiteKeys">
                 <rect id="noteC" x="5" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteCtop" x="5" y="20" width="90" height="7" fill="white"/> -->
                 <rect id="noteD" x="97" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteDtop" x="97" y="20" width="90" height="7" fill="white"/> -->
                 <rect id="noteE" x="189" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteEtop" x="189" y="20" width="90" height="10" fill="white"/> -->
                 <rect id="noteF" x="281" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteFtop" x="281" y="20" width="90" height="10" fill="white"/> -->
                 <rect id="noteG" x="373" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteGtop" x="373" y="20" width="90" height="10" fill="white"/> -->
                 <rect id="noteA" x="465" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteAtop" x="465" y="20" width="90" height="10" fill="white"/> -->
                 <rect id="noteB" x="557" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteBtop" x="557" y="20" width="90" height="10" fill="white"/> -->
                 <rect id="noteC2" x="649" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteC2top" x="649" y="20" width="90" height="10" fill="white"/> -->
                 <rect id="noteD2" x="741" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteD2top" x="741" y="20" width="90" height="10" fill="white"/> -->
                 <rect id="noteE2" x="833" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteE2top" x="833" y="20" width="90" height="10" fill="white"/> -->
                 <rect id="noteF2" x="925" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteF2top" x="925" y="20" width="90" height="10" fill="white"/> -->
                 <rect id="noteG2" x="1017" y="20" rx="15" ry="7" width="90" height="400" fill="white"/>
-                <!-- <rect id="noteG2top" x="1017" y="20" width="90" height="10" fill="white"/> -->
             </g>
-            <!-- Black Keys -->
-            <g>
+            <g id="blackKeys">
                 <g id="noteCsharp" transform="translate(50,0)">
                     <rect id="noteBase" x="5" y="20" rx="15" ry="7" width="60" height="250" fill="#504b4b" />
                     <rect id="noteFront1" x="5" y="256" rx="15" ry="7" width="60" height="14" fill="#696969" />
@@ -77,54 +62,18 @@
                     <rect id="noteGlare" x="9" y="237" rx="15" ry="7" width="53" height="14" fill="#ddd9" />
                     <rect id="noteTop" x="9" y="20" rx="15" ry="7" width="52" height="230" fill="#000" />
                 </g>
-             
-
             </g>
-            <!-- Velvet -->
             <rect id="velvet" x="5" y="20" width="1102" height="7" fill="#aa173b" />
         </g>
 
-        <!-- Stave -->
         <g id="stave">
-            <line id="line5" x1="0" y1="500" x2="500" y2="500" stroke="black" stroke-width="3px" />
-            <line id="line4" x1="0" y1="515" x2="500" y2="515" stroke="black" stroke-width="3px" />
-            <line id="line3" x1="0" y1="530" x2="500" y2="530" stroke="black" stroke-width="3px" />
-            <line id="line2" x1="0" y1="545" x2="500" y2="545" stroke="black" stroke-width="3px" />
-            <line id="line1" x1="0" y1="560" x2="500" y2="560" stroke="black" stroke-width="3px" />
+            <line id="line5" x1="20" y1="500" x2="250" y2="500" stroke="black" stroke-width="3px" />
+            <line id="line4" x1="20" y1="515" x2="250" y2="515" stroke="black" stroke-width="3px" />
+            <line id="line3" x1="20" y1="530" x2="250" y2="530" stroke="black" stroke-width="3px" />
+            <line id="line2" x1="20" y1="545" x2="250" y2="545" stroke="black" stroke-width="3px" />
+            <line id="line1" x1="20" y1="560" x2="250" y2="560" stroke="black" stroke-width="3px" />
+        </g>
 
-
-            <!-- Treble clef -->
-            <!-- <g id="trebleClef1">
-                <circle cx="30" cy="545" r="7"/>
-                <path d="M30 545 A10, 20 0 0, 1   45 545 A15, 12 0 0, 1   30 560  A15, 15 0 0, 1   12 545
-                A30, 60 0 0, 1   30 510  A5, 12 0 1, 0   32 480 A2, 12 0 0, 0   30 500
-                " stroke="black" stroke-width="4" fill="none"/>
-                <path d="M30 500 L 30 565 A10, 30 0 0, 1   15 585" stroke="black" stroke-width="4" fill="none"/>
-                <circle cx="17" cy="583" r="5"/>
-            </g> -->
-
-
-            <!-- <g
-            id="trebleClef2"
-            transform="matrix(1.010278,0,0,1.010278,-24.38602,-0.986803) translate(25,455)  scale(1.8)">
-           <path
-              sodipodi:nodetypes="cssssssssscsssssssssc"
-              id="path1947"
-              d="M 39.708934,63.678683 C 39.317094,65.77065 41.499606,70.115061 45.890584,70.256984 C 51.19892,70.428558 54.590321,66.367906 53.010333,59.740875 L 45.086538,23.171517 C 44.143281,18.81826 44.851281,16.457097 45.354941,15.049945 C 46.698676,11.295749 50.055822,9.7473042 50.873134,10.949208 C 51.339763,11.635413 52.468042,14.844006 49.256275,20.590821 C 46.751378,25.072835 35.096985,30.950138 34.2417,41.468011 C 33.501282,50.614249 43.075689,57.369301 51.339266,54.71374 C 56.825686,52.950639 59.653965,44.62402 56.258057,40.328987 C 47.29624,28.994371 32.923702,46.341263 46.846564,51.0935 C 45.332604,49.90238 44.300646,48.980054 44.1085,47.852721 C 42.237755,36.876941 58.741182,39.774741 54.294493,50.18735 C 52.466001,54.469045 45.080341,55.297323 40.874269,51.477433 C 37.350853,48.277521 35.787387,42.113231 39.708327,37.687888 C 45.018831,31.694223 51.288782,26.31366 52.954064,18.108736 C 54.923313,8.4061491 48.493821,0.84188926 44.429027,10.385835 C 43.065093,13.588288 42.557016,16.803074 43.863006,22.963534 L 51.780549,60.311215 C 52.347386,62.985028 51.967911,66.664419 49.472374,68.355474 C 48.236187,69.193154 43.861784,69.769668 42.791575,67.770092"
-              style="fill:black;fill-opacity:1;fill-rule:nonzero;stroke:black;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-           <path
-              transform="matrix(-1.08512,-2.036848e-2,2.036848e-2,-1.08512,90.68868,135.0572)"
-              d="M 48.24903 64.584198 A 3.439605 3.4987047 0 1 1  41.36982,64.584198 A 3.439605 3.4987047 0 1 1  48.24903 64.584198 z"
-              sodipodi:ry="3.4987047"
-              sodipodi:rx="3.439605"
-              sodipodi:cy="64.584198"
-              sodipodi:cx="44.809425"
-              id="path4608"
-              style="fill:black;fill-opacity:1;stroke:black;stroke-width:0.09213948;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-              sodipodi:type="arc" />
-         </g> -->
-
-         <!-- <g id="trebleclef3" transform="matrix(1.010278,0,0,1.010278,-24.38602,-0.986803) translate(30,495)"> -->
         <g id="trebleClef3" transform="translate(70,465) scale(1.7)">
                 <path
                 style="fill:black;fill-rule:nonzero;stroke:black;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
@@ -141,11 +90,9 @@
                 sodipodi:ry="3.4987047"
                 d="M 48.24903 64.584198 A 3.439605 3.4987047 0 1 1  41.36982,64.584198 A 3.439605 3.4987047 0 1 1  48.24903 64.584198 z"
                 transform="matrix(-1.08512,-2.036848e-2,2.036848e-2,-1.08512,90.68868,135.0572)" />
-         </g>
+        </g>
 
-        <g
-            id="mysemibreve"
-            transform="translate(300,527) scale(0.58)">
+        <g id="mysemibreve" transform="translate(300,527) scale(0.58)">
             <path
             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
             d="M 19.3125,126.90625 C 8.64348,126.90625 0,132.10043 0,138.46875 0,144.83708 8.64349,150.00003 19.3125,150 c 10.66902,0 19.34374,-5.16292 19.34375,-11.53125 0,-6.36833 -8.67473,-11.56252 -19.34375,-11.5625 z M 14.59375,129 c 2.77434,-0.0361 6.19235,1.04942 9.40625,3.21875 5.7136,3.85657 8.58014,9.6647 6.40625,12.9375 -2.17388,3.27282 -8.56765,2.79408 -14.28125,-1.0625 -5.71359,-3.85657 -8.58014,-9.6647 -6.4062503,-12.9375 C 10.66983,129.72439 12.43593,129.02807 14.59375,129 Z"/>
@@ -158,15 +105,10 @@
         </g>
 
         <line id="ledgerline" x1="296" y1="620" x2="326" y2="620" stroke="black" stroke-width="3" fill="none"/>
-
-            <!-- <circle id="semibreve" cx="150" cy="620" r="7" stroke="black" stroke-width="3" fill="none" /> -->
-            <!-- <line id="ledgerline" x1=140 y1="620" x2="160" y2="620" stroke="black" stroke-width="3" fill="none"/> -->
-
-        </g>
-
-                
     </svg>
-    <input id="testSlider" type="range" orient="vertical">
+
+    <input id="testSlider" type="range" orient="vertical"> <!-- Not currently implemented -->
+
     <div id="wavType">
         <strong>Wave Type</strong><br>
         <input id="sine" onchange="changeType()" type="radio" name="waveform" checked value="sine">Sine (V)<br>
@@ -174,6 +116,7 @@
         <input id="triangle" onchange="changeType()" type="radio" name="waveform" value="triangle">Triangle (N)<br>
         <input id="square" onchange="changeType()" type="radio" name="waveform" value="square">Square (M)
     </div>
+
     <h3>GUI Keyboard:</h3>
     <p id="answer"> </p>
     <h3>Computer Keyboard:</h3>
@@ -571,20 +514,22 @@
                 var radiobtn = document.getElementById("sine");
                 radiobtn.checked = true;
                 changeType()
-            }   else if(code == 66 || code == 98) {
+            }   
+            else if(code == 66 || code == 98) {
                 var radiobtn = document.getElementById("sawtooth");
                 radiobtn.checked = true;
                 changeType()
-            }   else if(code == 78 || code == 110) {
+            }   
+            else if(code == 78 || code == 110) {
                 var radiobtn = document.getElementById("triangle");
                 radiobtn.checked = true;
                 changeType()
-            }   else if(code == 77 || code == 109) {
+            }   
+            else if(code == 77 || code == 109) {
                 var radiobtn = document.getElementById("square");
                 radiobtn.checked = true;
                 changeType()
             }
-
         });
 
 
@@ -640,16 +585,6 @@
         function changeType() {
             type = document.querySelector("input[name='waveform']:checked").value;
             console.log(type); }
-
-
-
-
-
-
-
-
-
-
 
     </script>
     
