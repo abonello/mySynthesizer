@@ -94,19 +94,19 @@
                 transform="matrix(-1.08512,-2.036848e-2,2.036848e-2,-1.08512,90.68868,135.0572)" />
         </g>
 
-        <g id="mysemibreve" transform="translate(300,527) scale(0.58)">
+        <g id="mysemibreve" transform="translate(140,527) scale(0.58)">
             <path
             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.5999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
             d="M 19.3125,126.90625 C 8.64348,126.90625 0,132.10043 0,138.46875 0,144.83708 8.64349,150.00003 19.3125,150 c 10.66902,0 19.34374,-5.16292 19.34375,-11.53125 0,-6.36833 -8.67473,-11.56252 -19.34375,-11.5625 z M 14.59375,129 c 2.77434,-0.0361 6.19235,1.04942 9.40625,3.21875 5.7136,3.85657 8.58014,9.6647 6.40625,12.9375 -2.17388,3.27282 -8.56765,2.79408 -14.28125,-1.0625 -5.71359,-3.85657 -8.58014,-9.6647 -6.4062503,-12.9375 C 10.66983,129.72439 12.43593,129.02807 14.59375,129 Z"/>
         </g>
 
-        <g id="sharpsign" transform="translate(160,100) scale(1.5)" >
+        <g id="sharpsign" transform="translate(0,100) scale(1.5)" >
             <path
                 d="M 86.102000,447.45700 L 86.102000,442.75300 L 88.102000,442.20100 L 88.102000,446.88100 L 86.102000,447.45700 z M 90.040000,446.31900 L 88.665000,446.71300 L 88.665000,442.03300 L 90.040000,441.64900 L 90.040000,439.70500 L 88.665000,440.08900 L 88.665000,435.30723 L 88.102000,435.30723 L 88.102000,440.23400 L 86.102000,440.80900 L 86.102000,436.15923 L 85.571000,436.15923 L 85.571000,440.98600 L 84.196000,441.37100 L 84.196000,443.31900 L 85.571000,442.93500 L 85.571000,447.60600 L 84.196000,447.98900 L 84.196000,449.92900 L 85.571000,449.54500 L 85.571000,454.29977 L 86.102000,454.29977 L 86.102000,449.37500 L 88.102000,448.82500 L 88.102000,453.45077 L 88.665000,453.45077 L 88.665000,448.65100 L 90.040000,448.26600 L 90.040000,446.31900 z "
                 style="fill:#000000" />
         </g>
 
-        <line id="ledgerline" x1="296" y1="620" x2="326" y2="620" stroke="black" stroke-width="3" fill="none"/>
+        <line id="ledgerline" x1="136" y1="620" x2="166" y2="620" stroke="black" stroke-width="3" fill="none"/>
     </svg>
 
     <input id="testSlider" type="range" orient="vertical"> <!-- Not currently implemented -->
@@ -137,177 +137,177 @@
             $("#answer").text("C");
             // $("#semibreve").attr('cy', function () { return 575; });
             // $("#semibreve").css("transform","translate(250px,507px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,494px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,494px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 575; })
                 .attr('y2', function () { return 575; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(261.626);
         });
         $("#noteCsharp").click(function() {
             $("#answer").text("C♯ / D♭");
-            $("#mysemibreve").css("transform","translate(300px,494px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,494px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 575; })
                 .attr('y2', function () { return 575; });
-            $("#sharpsign").css("transform","translate(160px,-90px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,-90px) scale(1.5)");
             playSynth(277.183);
         });
         $("#noteD").click(function() {
             $("#answer").text("D");
             // $("#semibreve").attr('cy', function () { return 567; });
             // $("#semibreve").css("transform","translate(250px,500px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,487px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,487px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(293.665);
         });
         $("#noteDsharp").click(function() {
             $("#answer").text("D♯ / E♭");
-            $("#mysemibreve").css("transform","translate(300px,487px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,487px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,-98px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,-98px) scale(1.5)");
             playSynth(311.127);
         });
         $("#noteE").click(function() {
             $("#answer").text("E");
             // $("#semibreve").attr('cy', function () { return 560; });
             // $("#semibreve").css("transform","translate(250px,493px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,479px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,479px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(329.628);
         });
         $("#noteF").click(function() {
             $("#answer").text("F");
             // $("#semibreve").attr('cy', function () { return 552; });
             // $("#semibreve").css("transform","translate(250px,485px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,472px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,472px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(349.228);
         });
         $("#noteFsharp").click(function() {
             $("#answer").text("F♯ / G♭");
-            $("#mysemibreve").css("transform","translate(300px,472px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,472px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,-115px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,-115px) scale(1.5)");
             playSynth(369.994);
         });
         $("#noteG").click(function() {
             $("#answer").text("G");
             // $("#semibreve").attr('cy', function () { return 545; });
             // $("#semibreve").css("transform","translate(250px,478px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,464px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,464px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(391.995);
         });
         $("#noteGsharp").click(function() {
             $("#answer").text("G♯ / A♭");
-            $("#mysemibreve").css("transform","translate(300px,464px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,464px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,-122px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,-122px) scale(1.5)");
             playSynth(415.305);
         });
         $("#noteA").click(function() {
             $("#answer").text("A");
             // $("#semibreve").attr('cy', function () { return 537; });
             // $("#semibreve").css("transform","translate(250px,470px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,457px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,457px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(440);
         });
         $("#noteAsharp").click(function() {
             $("#answer").text("A♯ / B♭");
-            $("#mysemibreve").css("transform","translate(300px,457px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,457px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,-130px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,-130px) scale(1.5)");
             playSynth(466.164);
         });
         $("#noteB").click(function() {
             $("#answer").text("B");
             // $("#semibreve").attr('cy', function () { return 530; });
             // $("#semibreve").css("transform","translate(250px,463px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,449px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,449px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(493.883);
         });
         $("#noteC2").click(function() {
             $("#answer").text("C'");
             // $("#semibreve").attr('cy', function () { return 522; });
             // $("#semibreve").css("transform","translate(250px,455px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,442px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,442px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(523.251);
         });
         $("#noteD2").click(function() {
             $("#answer").text("D'");
             // $("#semibreve").attr('cy', function () { return 515; });
             // $("#semibreve").css("transform","translate(250px,447px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,434px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,434px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(587.33);
         });
         $("#noteE2").click(function() {
             $("#answer").text("E'");
             // $("#semibreve").attr('cy', function () { return 507; });
             // $("#semibreve").css("transform","translate(250px,440px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,427px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,427px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(659.255);
         });
         $("#noteF2").click(function() {
             $("#answer").text("F'");
             // $("#semibreve").attr('cy', function () { return 500; });
             // $("#semibreve").css("transform","translate(250px,432px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,419px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,419px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(698.456);
         });
         $("#noteG2").click(function() {
             $("#answer").text("G'");
             // $("#semibreve").attr('cy', function () { return 492; });
             // $("#semibreve").css("transform","translate(250px,425px)  scale(0.58)");
-            $("#mysemibreve").css("transform","translate(300px,412px)  scale(0.58)");
+            $("#mysemibreve").css("transform","translate(140px,412px)  scale(0.58)");
             $("#ledgerline")
                 .attr('y1', function () { return 620; })
                 .attr('y2', function () { return 620; });
-            $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+            $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
             playSynth(783.991);
         });
         
@@ -339,176 +339,176 @@
             // alert(code);
             if(code == 97 || code == 65) { 
                 $("#keyPressed").text("C");
-                $("#mysemibreve").css("transform","translate(300px,494px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,494px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 575; })
                     .attr('y2', function () { return 575; });
                 // frequency = 256;
                 // console.log(frequency);
                 $("#noteC").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(261.626);
             }  
             else if(code == 87 || code == 119) { 
                 $("#keyPressed").text("C♯ / D♭");
-                $("#mysemibreve").css("transform","translate(300px,494px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,494px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 575; })
                     .attr('y2', function () { return 575; });
                 // frequency = 256;
                 // console.log(frequency);
                 $("#noteCsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,-90px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,-90px) scale(1.5)");
                 playSynth(277.183);
             }     
             else if(code == 115 || code == 83) { 
                 $("#keyPressed").text("D");
-                $("#mysemibreve").css("transform","translate(300px,487px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,487px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteD").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(293.665);
             }
             else if(code == 101 || code == 69) { 
                 $("#keyPressed").text("D♯ / E♭");
-                $("#mysemibreve").css("transform","translate(300px,487px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,487px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteDsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,-98px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,-98px) scale(1.5)");
                 playSynth(311.127);
             }
             else if(code == 100 || code == 68) { 
                 $("#keyPressed").text("E");
-                $("#mysemibreve").css("transform","translate(300px,479px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,479px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteE").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(329.628);
             }
             else if(code == 102 || code == 70) { 
                 $("#keyPressed").text("F");
-                $("#mysemibreve").css("transform","translate(300px,472px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,472px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteF").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(349.228);
             }
             else if(code == 116 || code == 84) { 
                 $("#keyPressed").text("F♯ / G♭");
-                $("#mysemibreve").css("transform","translate(300px,472px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,472px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteFsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,-115px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,-115px) scale(1.5)");
                 playSynth(369.994);
             }
             else if(code == 103 || code == 71) { 
                 $("#keyPressed").text("G");
-                $("#mysemibreve").css("transform","translate(300px,464px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,464px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteG").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(391.995);
             }
             else if(code == 121 || code == 89) { 
                 $("#keyPressed").text("G♯ / A♭");
-                $("#mysemibreve").css("transform","translate(300px,464px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,464px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteGsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,-122px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,-122px) scale(1.5)");
                 playSynth(415.305);
             }
             else if(code == 104 || code == 72) { 
                 $("#keyPressed").text("A");
-                $("#mysemibreve").css("transform","translate(300px,457px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,457px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteA").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(440);
             }
             else if(code == 117 || code == 85) { 
                 $("#keyPressed").text("A♯ / B♭");
-                $("#mysemibreve").css("transform","translate(300px,457px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,457px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteAsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,-130px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,-130px) scale(1.5)");
                 playSynth(466.164);
             }
             else if(code == 106 || code == 74) { 
                 $("#keyPressed").text("B");
-                $("#mysemibreve").css("transform","translate(300px,449px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,449px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteB").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(493.883);
             }
             else if(code == 107 || code == 75) { 
                 $("#keyPressed").text("C'");
-                $("#mysemibreve").css("transform","translate(300px,442px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,442px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteC2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(523.251);
             }
             else if(code == 108 || code == 76) { 
                 $("#keyPressed").text("D'");
-                $("#mysemibreve").css("transform","translate(300px,434px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,434px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteD2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(587.33);
             }
             else if(code == 59 || code == 58) { 
                 $("#keyPressed").text("E'");
-                $("#mysemibreve").css("transform","translate(300px,427px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,427px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteE2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(659.255);
             }
             else if(code == 39 || code == 34) { 
                 $("#keyPressed").text("F'");
-                $("#mysemibreve").css("transform","translate(300px,419px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,419px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteF2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(698.456);
             }
             else if(code == 92 || code == 124) { 
                 $("#keyPressed").text("G'");
-                $("#mysemibreve").css("transform","translate(300px,412px)  scale(0.58)");
+                $("#mysemibreve").css("transform","translate(140px,412px)  scale(0.58)");
                 $("#ledgerline")
                     .attr('y1', function () { return 620; })
                     .attr('y2', function () { return 620; });
                 $("#noteG2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(160px,100px) scale(1.5)");
+                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
                 playSynth(783.991);
             }
 
