@@ -6,51 +6,75 @@ body {
     background-color: green;
 }
 
-#noteC:hover {
+.hovered {
     fill: var(--active-key);
 }
 
-#noteD:hover {
+#noteC:hover, #noteC.hovered {
     fill: var(--active-key);
 }
 
-#noteE:hover {
+#noteCsharp:hover > rect, #noteCsharp:hover > polygon, #noteCsharp.hovered {
     fill: var(--active-key);
 }
 
-#noteF:hover {
+#noteD:hover, #noteD.hovered {
     fill: var(--active-key);
 }
 
-#noteG:hover {
+#noteDsharp:hover > rect, #noteDsharp:hover > polygon, #noteDsharp.hovered {
     fill: var(--active-key);
 }
 
-#noteA:hover {
+#noteE:hover, #noteE.hovered {
     fill: var(--active-key);
 }
 
-#noteB:hover {
+#noteF:hover, #noteF.hovered {
     fill: var(--active-key);
 }
 
-#noteC2:hover {
+#noteFsharp:hover > rect, #noteFsharp:hover > polygon, #noteFsharp.hovered {
     fill: var(--active-key);
 }
 
-#noteD2:hover {
+#noteG:hover, #noteG.hovered {
     fill: var(--active-key);
 }
 
-#noteE2:hover {
+#noteGsharp:hover > rect, #noteGsharp:hover > polygon, #noteGsharp.hovered {
     fill: var(--active-key);
 }
 
-#noteF2:hover {
+#noteA:hover, #noteA.hovered {
     fill: var(--active-key);
 }
 
-#noteG2:hover {
+#noteAsharp:hover > rect, #noteAsharp:hover > polygon, #noteAsharp.hovered {
+    fill: var(--active-key);
+}
+
+#noteB:hover, #noteB.hovered {
+    fill: var(--active-key);
+}
+
+#noteC2:hover, #noteC2.hovered {
+    fill: var(--active-key);
+}
+
+#noteD2:hover, #noteD2.hovered {
+    fill: var(--active-key);
+}
+
+#noteE2:hover, #noteE2.hovered {
+    fill: var(--active-key);
+}
+
+#noteF2:hover, #noteF2.hovered {
+    fill: var(--active-key);
+}
+
+#noteG2:hover, #noteG2.hovered {
     fill: var(--active-key);
 }
 
