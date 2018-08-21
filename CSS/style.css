@@ -6,6 +6,10 @@ body {
     background-color: green;
 }
 
+svg {
+    position: relative;
+}
+
 .hovered {
     fill: var(--active-key);
 }
@@ -86,9 +90,19 @@ body {
 }
 
 #testSlider {
-    position: fixed;
-    left: 1080px;
-    top: 450px;
+    /* position: fixed; */
+    /* position: absolute; */
+    /* left: 1080px;
+    top: 450px; */
+    /* top: 450px;
+    left: 0; */
+}
+
+#slider {
+    color: p
+}
+#volSlider {
+    cursor: ns-resize;
 }
 
 input[type=range][orient=vertical]

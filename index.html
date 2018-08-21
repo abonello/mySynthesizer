@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <svg width="1112" height="600" style="background-color:aqua">
+    <h1>The Syntesizer</h1>
+    <p>Programmed by <strong>Anthony Bonello</strong>, 2018.</p>
+    <svg width="1112" height="600" style="background-color:aqua" onload="makeDraggable(evt)">
         <g id="Keyboard">
             <rect id="background" x="5" y="20" width="1102" height="400" fill="#535353" />
             <g id="whiteKeys">
@@ -27,23 +29,12 @@
             </g>
             <g id="blackKeys">
                 <g id="noteCsharp" transform="translate(50,0)">
-                    <!-- <rect id="noteBase" x="5" y="20" rx="15" ry="7" width="60" height="250" fill="#504b4b" /> -->
-                    <!-- <rect id="noteFront1" x="5" y="256" rx="15" ry="7" width="60" height="14" fill="#696969" />
-                    <polygon id="noteFront2" points="5 263 9 233 61 233 65 263" fill="#696969"/>
-                    <rect id="noteGlare" x="9" y="237" rx="15" ry="7" width="53" height="14" fill="#ddd9" />
-                    <rect id="noteTop" x="9" y="20" rx="15" ry="7" width="52" height="230" fill="#000" /> -->
                     <image id="imgCsharp" xlink:href="BlackKey2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" />
                     <image id="imgCsharpPressed" class="blackKey" xlink:href="BlackKeyPressed2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" opacity="0"/>
-                    
                 </g>
                 <g id="noteDsharp" transform="translate(164,0)">
-                    <!-- <rect id="noteBase" x="5" y="20" rx="15" ry="7" width="60" height="250" fill="#504b4b" />
-                    <rect id="noteFront1" x="5" y="256" rx="15" ry="7" width="60" height="14" fill="#696969" />
-                    <polygon id="noteFront2" points="5 263 9 233 61 233 65 263" fill="#696969"/>
-                    <rect id="noteGlare" x="9" y="237" rx="15" ry="7" width="53" height="14" fill="#ddd9" />
-                    <rect id="noteTop" x="9" y="20" rx="15" ry="7" width="52" height="230" fill="#000" /> -->
                     <image xlink:href="BlackKey2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" />
                     <image id="imgDsharpPressed" class="blackKey" xlink:href="BlackKeyPressed2small.png" x="-7" y="25" height="250px" width="60px" 
@@ -51,33 +42,18 @@
                 </g>
 
                 <g id="noteFsharp" transform="translate(321,0)">
-                    <!-- <rect id="noteBase" x="5" y="20" rx="15" ry="7" width="60" height="250" fill="#504b4b" />
-                    <rect id="noteFront1" x="5" y="256" rx="15" ry="7" width="60" height="14" fill="#696969" />
-                    <polygon id="noteFront2" points="5 263 9 233 61 233 65 263" fill="#696969"/>
-                    <rect id="noteGlare" x="9" y="237" rx="15" ry="7" width="53" height="14" fill="#ddd9" />
-                    <rect id="noteTop" x="9" y="20" rx="15" ry="7" width="52" height="230" fill="#000" /> -->
                     <image xlink:href="BlackKey2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" />
                     <image id="imgFsharpPressed" class="blackKey" xlink:href="BlackKeyPressed2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" opacity="0"/>
                 </g>
                 <g id="noteGsharp" transform="translate(428,0)">
-                    <!-- <rect id="noteBase" x="5" y="20" rx="15" ry="7" width="60" height="250" fill="#504b4b" />
-                    <rect id="noteFront1" x="5" y="256" rx="15" ry="7" width="60" height="14" fill="#696969" />
-                    <polygon id="noteFront2" points="5 263 9 233 61 233 65 263" fill="#696969"/>
-                    <rect id="noteGlare" x="9" y="237" rx="15" ry="7" width="53" height="14" fill="#ddd9" />
-                    <rect id="noteTop" x="9" y="20" rx="15" ry="7" width="52" height="230" fill="#000" /> -->
                     <image xlink:href="BlackKey2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" />
                     <image id="imgGsharpPressed" class="blackKey" xlink:href="BlackKeyPressed2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" opacity="0"/>
                 </g>
                 <g id="noteAsharp" transform="translate(535,0)">
-                    <!-- <rect id="noteBase" x="5" y="20" rx="15" ry="7" width="60" height="250" fill="#504b4b" />
-                    <rect id="noteFront1" x="5" y="256" rx="15" ry="7" width="60" height="14" fill="#696969" />
-                    <polygon id="noteFront2" points="5 263 9 233 61 233 65 263" fill="#696969"/>
-                    <rect id="noteGlare" x="9" y="237" rx="15" ry="7" width="53" height="14" fill="#ddd9" />
-                    <rect id="noteTop" x="9" y="20" rx="15" ry="7" width="52" height="230" fill="#000" /> -->
                     <image xlink:href="BlackKey2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" />
                     <image id="imgAsharpPressed" class="blackKey" xlink:href="BlackKeyPressed2small.png" x="-7" y="25" height="250px" width="60px" 
@@ -148,9 +124,19 @@
         </g>
 
         <line id="ledgerline" x1="136" y1="620" x2="166" y2="620" stroke="black" stroke-width="3" fill="none"/>
+        <g id="slider" transform="translate(300, 475)">
+            <!-- <line id="volSliderRail" x1="0" y1="0" x2="0" y2="100" stroke="black" stroke-width="3" fill="none"/> -->
+            <line x1="-5" y1="98" x2="8" y2="98" stroke="black" stroke-width="1" fill="none" />
+            <line x1="-5" y1="50" x2="8" y2="50" stroke="black" stroke-width="1" fill="none" />
+            <line x1="-5" y1="2" x2="8" y2="2" stroke="black" stroke-width="1" fill="none" />
+            <rect id="volSliderRail" x="0" y="0" width="3" height="100" stroke="powderblue" stroke-width="2" fill="dark-grey" />
+            <rect id="volSlider" x="-10" y="0" rx="7" ry="3" class="draggable"
+            width="23" height="7" stroke="black" stroke-width="2" fill="cadetblue"  />
+            <text x="-26" y="117">Volume</text>
+        </g>
     </svg>
 
-    <input id="testSlider" type="range" orient="vertical"> <!-- Not currently implemented -->
+    <!-- <input id="testSlider" type="range" orient="vertical"> Not currently implemented -->
 
     <div id="wavType">
         <strong>Wave Type</strong><br>
@@ -330,7 +316,7 @@
             playSynth(freq);
         }
 
-        $( "body" ).keypress(function(e) {
+        $("body").keypress(function(e) {
             // console.log( "Handler for .keypress() called." );
             var code = e.keyCode || e.which;
             // alert(code);
@@ -401,10 +387,64 @@
             }
         });
 
+        // $("volSlider").mousemove(function(e){
+        //     console.log(e);
+        // });
 
+        // $("#volSlider").mousedown(function(e) {
+        //     console.log(e);
+        //     console.log(this.getBoundingClientRect()["y"]);
+        //     var trackMouse = $("volSlider").mousemove();
+        //     console.log(trackMouse);
+            // $(this).mousemove();
+            // $(this).attr('y', function () { return this.mousemove(); })
+            // Example:
+            // $('svg circle')[0].getBBox();
+        // })
+        
+        var selectedElement = false;
+        // For Volume Control - May be used for other things later.
+        function makeDraggable(evt) {
+            var svg = evt.target;
+            svg.addEventListener('mousedown', startDrag);
+            svg.addEventListener('mousemove', drag);
+            svg.addEventListener('mouseup', endDrag);
+            svg.addEventListener('mouseleave', endDrag);
+            function startDrag(evt) {
+                if (evt.target.classList.contains('draggable')) {
+                    selectedElement = evt.target;
+                }
+            }
+            function drag(evt) {
+                if (selectedElement) {
+                    evt.preventDefault();
+                    var coord = getMousePosition(evt);
+                    var y = coord.y;
+                    var minY = 480;
+                    var maxY = 575;
+                    if (y < minY) { y = minY; }
+                    if (y > maxY) { y = maxY; }
+                    selectedElement.setAttributeNS(null, "y", y-minY);
+
+                    // Calculate volume
+                    volume = (maxY - y)/(maxY-minY)
+                }
+            }
+            function endDrag(evt) {
+                selectedElement = null;
+            }
+            function getMousePosition(evt) {
+                var CTM = svg.getScreenCTM();
+                return {
+                    x: (evt.clientX - CTM.e) / CTM.a,
+                    y: (evt.clientY - CTM.f) / CTM.d
+                };
+            }
+        }
 
         var attack = 0.14; // default value
         var duration = 1.5; // default value
+        var volume = 1;
         var type = "sine";
 
         
@@ -429,11 +469,11 @@
             // ENVELOPE
             
             var now = con.currentTime; // Find what the time is now. # sec elapse since start of run.
-            amp.gain.setValueAtTime(0, now);
-            amp.gain.linearRampToValueAtTime(0.3, now + (duration * attack));
-            amp.gain.linearRampToValueAtTime(0.1, now + (2 * duration * attack));
-            amp.gain.linearRampToValueAtTime(0.08, now + (3 * duration * attack));
-            amp.gain.linearRampToValueAtTime(0, now + duration);
+            amp.gain.setValueAtTime(0 * volume, now);
+            amp.gain.linearRampToValueAtTime(0.3 * volume, now + (duration * attack));
+            amp.gain.linearRampToValueAtTime(0.1 * volume, now + (2 * duration * attack));
+            amp.gain.linearRampToValueAtTime(0.08 * volume, now + (3 * duration * attack));
+            amp.gain.linearRampToValueAtTime(0 * volume, now + duration);
             
             
             

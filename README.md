@@ -31,6 +31,16 @@ Found two svg treble clefs on [wikimedia](https://commons.wikimedia.org/wiki/Fil
 Changed the semibreve to one with no white space around it. (Based on previous semibreve.) I am using this one.
 
 
+====================
+
+## Adding title
+
+I tried to add a title to the page and some info. I noticed that because I placed the controls for wave shapes and the slider as fixed position now they lost their place. I need to change this.
+
+I created a new slider in svg.
+
+
+
 ## Example 1 - Controlling multiple parameters with ConstantSourceNode
 
 Following tutorial from this [LINK](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
