@@ -38,7 +38,6 @@
                     transform="scale(1.5, 1.1)" opacity="0"/>
                     
                 </g>
-                
                 <g id="noteDsharp" transform="translate(164,0)">
                     <!-- <rect id="noteBase" x="5" y="20" rx="15" ry="7" width="60" height="250" fill="#504b4b" />
                     <rect id="noteFront1" x="5" y="256" rx="15" ry="7" width="60" height="14" fill="#696969" />
@@ -82,6 +81,26 @@
                     <image xlink:href="BlackKey2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" />
                     <image id="imgAsharpPressed" class="blackKey" xlink:href="BlackKeyPressed2small.png" x="-7" y="25" height="250px" width="60px" 
+                    transform="scale(1.5, 1.1)" opacity="0"/>
+                </g>
+
+                <g id="noteC2sharp" transform="translate(699,0)">
+                    <image xlink:href="BlackKey2small.png" x="-7" y="25" height="250px" width="60px" 
+                    transform="scale(1.5, 1.1)" />
+                    <image id="imgC2sharpPressed" class="blackKey" xlink:href="BlackKeyPressed2small.png" x="-7" y="25" height="250px" width="60px" 
+                    transform="scale(1.5, 1.1)" opacity="0"/>
+                </g>
+                <g id="noteD2sharp" transform="translate(808,0)">
+                    <image xlink:href="BlackKey2small.png" x="-7" y="25" height="250px" width="60px" 
+                    transform="scale(1.5, 1.1)" />
+                    <image id="imgD2sharpPressed" class="blackKey" xlink:href="BlackKeyPressed2small.png" x="-7" y="25" height="250px" width="60px" 
+                    transform="scale(1.5, 1.1)" opacity="0"/>
+                </g>
+
+                <g id="noteF2sharp" transform="translate(965,0)">
+                    <image xlink:href="BlackKey2small.png" x="-7" y="25" height="250px" width="60px" 
+                    transform="scale(1.5, 1.1)" />
+                    <image id="imgF2sharpPressed" class="blackKey" xlink:href="BlackKeyPressed2small.png" x="-7" y="25" height="250px" width="60px" 
                     transform="scale(1.5, 1.1)" opacity="0"/>
                 </g>
             </g>
@@ -168,9 +187,12 @@
             "Asharp": { "text": "A♯ / B♭", "position": 457, "frequency": 466.164, "sharpPosition": -130 },
             "B": { "text": "B", "position": 449, "frequency": 493.883, "sharpPosition": 100 },
             "C2": { "text": "C'", "position": 442, "frequency": 523.251, "sharpPosition": 100 },
+            "C2sharp": { "text": "C♯ / D♭", "position": 442, "frequency": 554.365, "sharpPosition": -145 },
             "D2": { "text": "D'", "position": 434, "frequency": 587.330, "sharpPosition": 100 },
+            "D2sharp": { "text": "D♯ / E♭", "position": 434, "frequency": 622.254, "sharpPosition": -152 },
             "E2": { "text": "E'", "position": 427, "frequency": 659.255, "sharpPosition": 100 },
             "F2": { "text": "F'", "position": 419, "frequency": 698.456, "sharpPosition": 100 },
+            "F2sharp": { "text": "F♯ / G♭", "position": 419, "frequency": 739.989, "sharpPosition": -167 },
             "G2": { "text": "G'", "position": 412, "frequency": 783.991, "sharpPosition": 100 }
         }
 
@@ -238,14 +260,26 @@
         $("#noteC2").click(function() {
             clickNote(this);
         });
+        $("#noteC2sharp").click(function() {
+            clickNote(this);
+            $("#imgC2sharpPressed").css("opacity", "1");
+        });
         $("#noteD2").click(function() {
             clickNote(this);
+        });
+        $("#noteD2sharp").click(function() {
+            clickNote(this);
+            $("#imgD2sharpPressed").css("opacity", "1");
         });
         $("#noteE2").click(function() {
             clickNote(this);
         });
         $("#noteF2").click(function() {
             clickNote(this);
+        });
+        $("#noteF2sharp").click(function() {
+            clickNote(this);
+            $("#imgF2sharpPressed").css("opacity", "1");
         });
         $("#noteG2").click(function() {
             clickNote(this);
