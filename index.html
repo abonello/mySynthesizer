@@ -196,7 +196,6 @@
             "G2": { "text": "G'", "position": 412, "frequency": 783.991, "sharpPosition": 100 }
         }
 
-
         function clickNote(arg) {
             var text = arg.id + " ";
             text = text.slice(4, -1);
@@ -306,185 +305,79 @@
             else if(code == 222) { $("#noteF2").toggleClass("hovered"); }
             else if(code == 220) { $("#noteG2").toggleClass("hovered");}
         });
-        // var frequency = 0;
+        
+        function pressedNote(arg) {
+            // console.log(arg);
+            // console.log(jQuery.type(arg));
+            $(arg).toggleClass("hovered");
+            var text = arg + " ";
+            // console.log(text);
+            text = text.slice(5, -1);
+            // console.log(text);
+
+            $("#keyPressed").text(notes[text]["text"]);
+            var trans = "translate(140px, "+ notes[text]['position']+ "px) scale(0.58)"
+            $("#mysemibreve").css("transform", trans);
+            if (text == "C" || text == "Csharp") { ledgerLinePos = 575; } 
+            else { ledgerLinePos = 620; }
+            $("#ledgerline")
+                .attr('y1', function () { return ledgerLinePos; })
+                .attr('y2', function () { return ledgerLinePos; });
+            var sharpPos = "translate(0px, "+ notes[text]['sharpPosition']+ "px) scale(1.5)"
+            $("#sharpsign").css("transform",sharpPos);
+            $(".blackKey").css("opacity", "0");
+            var freq = notes[text]["frequency"]
+            playSynth(freq);
+        }
+
         $( "body" ).keypress(function(e) {
             // console.log( "Handler for .keypress() called." );
             var code = e.keyCode || e.which;
             // alert(code);
-            if(code == 97 || code == 65) { 
-                $("#keyPressed").text("C");
-                $("#mysemibreve").css("transform","translate(140px,494px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 575; })
-                    .attr('y2', function () { return 575; });
-                // frequency = 256;
-                // console.log(frequency);
-                $("#noteC").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(261.626);
-            }  
+            if(code == 97 || code == 65) { pressedNote("#noteC"); }  
             else if(code == 87 || code == 119) { 
-                $("#keyPressed").text("C♯ / D♭");
-                $("#mysemibreve").css("transform","translate(140px,494px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 575; })
-                    .attr('y2', function () { return 575; });
-                // frequency = 256;
-                // console.log(frequency);
-                $("#noteCsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,-90px) scale(1.5)");
-                playSynth(277.183);
+                pressedNote("#noteCsharp");
+                $("#imgCsharpPressed").css("opacity", "1");
             }     
-            else if(code == 115 || code == 83) { 
-                $("#keyPressed").text("D");
-                $("#mysemibreve").css("transform","translate(140px,487px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteD").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(293.665);
-            }
+            else if(code == 115 || code == 83) { pressedNote("#noteD"); }
             else if(code == 101 || code == 69) { 
-                $("#keyPressed").text("D♯ / E♭");
-                $("#mysemibreve").css("transform","translate(140px,487px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteDsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,-98px) scale(1.5)");
-                playSynth(311.127);
+                pressedNote("#noteDsharp");
+                $("#imgDsharpPressed").css("opacity", "1");
             }
-            else if(code == 100 || code == 68) { 
-                $("#keyPressed").text("E");
-                $("#mysemibreve").css("transform","translate(140px,479px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteE").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(329.628);
-            }
-            else if(code == 102 || code == 70) { 
-                $("#keyPressed").text("F");
-                $("#mysemibreve").css("transform","translate(140px,472px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteF").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(349.228);
-            }
+            else if(code == 100 || code == 68) { pressedNote("#noteE"); }
+            else if(code == 102 || code == 70) { pressedNote("#noteF"); }
             else if(code == 116 || code == 84) { 
-                $("#keyPressed").text("F♯ / G♭");
-                $("#mysemibreve").css("transform","translate(140px,472px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteFsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,-115px) scale(1.5)");
-                playSynth(369.994);
+                pressedNote("#noteFsharp");
+                $("#imgFsharpPressed").css("opacity", "1"); 
             }
-            else if(code == 103 || code == 71) { 
-                $("#keyPressed").text("G");
-                $("#mysemibreve").css("transform","translate(140px,464px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteG").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(391.995);
-            }
+            else if(code == 103 || code == 71) { pressedNote("#noteG"); }
             else if(code == 121 || code == 89) { 
-                $("#keyPressed").text("G♯ / A♭");
-                $("#mysemibreve").css("transform","translate(140px,464px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteGsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,-122px) scale(1.5)");
-                playSynth(415.305);
+                pressedNote("#noteGsharp");
+                $("#imgGsharpPressed").css("opacity", "1"); 
             }
-            else if(code == 104 || code == 72) { 
-                $("#keyPressed").text("A");
-                $("#mysemibreve").css("transform","translate(140px,457px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteA").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(440);
-            }
+            else if(code == 104 || code == 72) { pressedNote("#noteA"); }
             else if(code == 117 || code == 85) { 
-                $("#keyPressed").text("A♯ / B♭");
-                $("#mysemibreve").css("transform","translate(140px,457px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteAsharp").children().toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,-130px) scale(1.5)");
-                playSynth(466.164);
+                pressedNote("#noteAsharp");
+                $("#imgAsharpPressed").css("opacity", "1");
             }
-            else if(code == 106 || code == 74) { 
-                $("#keyPressed").text("B");
-                $("#mysemibreve").css("transform","translate(140px,449px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteB").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(493.883);
-            }
-            else if(code == 107 || code == 75) { 
-                $("#keyPressed").text("C'");
-                $("#mysemibreve").css("transform","translate(140px,442px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteC2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(523.251);
-            }
-            else if(code == 108 || code == 76) { 
-                $("#keyPressed").text("D'");
-                $("#mysemibreve").css("transform","translate(140px,434px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteD2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(587.33);
-            }
-            else if(code == 59 || code == 58) { 
-                $("#keyPressed").text("E'");
-                $("#mysemibreve").css("transform","translate(140px,427px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteE2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(659.255);
-            }
-            else if(code == 39 || code == 34) { 
-                $("#keyPressed").text("F'");
-                $("#mysemibreve").css("transform","translate(140px,419px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteF2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(698.456);
-            }
-            else if(code == 92 || code == 124) { 
-                $("#keyPressed").text("G'");
-                $("#mysemibreve").css("transform","translate(140px,412px)  scale(0.58)");
-                $("#ledgerline")
-                    .attr('y1', function () { return 620; })
-                    .attr('y2', function () { return 620; });
-                $("#noteG2").toggleClass("hovered");
-                $("#sharpsign").css("transform","translate(0px,100px) scale(1.5)");
-                playSynth(783.991);
-            }
+            else if(code == 106 || code == 74) { pressedNote("#noteB"); }
+            else if(code == 107 || code == 75) { pressedNote("#noteC2"); }
+            else if(code == 79 || code == 111) { 
+                pressedNote("#noteC2sharp");
+                $("#imgC2sharpPressed").css("opacity", "1");
+            }     
+            else if(code == 108 || code == 76) { pressedNote("#noteD2"); }
+            else if(code == 80 || code == 112) { 
+                pressedNote("#noteD2sharp");
+                $("#imgD2sharpPressed").css("opacity", "1");
+            }  
+            else if(code == 59 || code == 58) { pressedNote("#noteE2"); }
+            else if(code == 39 || code == 34) { pressedNote("#noteF2"); }
+            else if(code == 93 || code == 125) { 
+                pressedNote("#noteF2sharp");
+                $("#imgF2sharpPressed").css("opacity", "1");
+            }  
+            else if(code == 92 || code == 124) { pressedNote("#noteG2"); }
 
             if(code == 86 || code == 118) {
                 var radiobtn = document.getElementById("sine");
@@ -560,7 +453,8 @@
         function change_duration(data) { duration = data.value; }
         function changeType() {
             type = document.querySelector("input[name='waveform']:checked").value;
-            console.log(type); }
+            // console.log(type); 
+            }
 
     </script>
     
