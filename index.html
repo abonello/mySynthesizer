@@ -387,6 +387,48 @@
             }
         });
 
+        // function releaseKeyCs() {
+
+        //     $("#imgCsharpPressed").style.opacity = "0";
+        // }
+        // $("#noteCsharp").onkeyup = function() {
+        //     $("#imgCsharpPressed").style.opacity = "0";
+        // }
+        window.addEventListener("keyup", releaseBlackKey, false);
+        
+        function releaseBlackKey(key) {
+            console.log(key.keyCode);
+            if(key.keyCode == 87 || key.keyCode == 119) {
+                $("#imgCsharpPressed").css( "opacity", 0);
+            }
+            else if(key.keyCode == 101 || key.keyCode == 69) {
+                $("#imgDsharpPressed").css( "opacity", 0);
+            }
+
+            else if(key.keyCode == 116 || key.keyCode == 84) {
+                $("#imgFsharpPressed").css( "opacity", 0);
+            }
+            else if(key.keyCode == 121 || key.keyCode == 89) {
+                $("#imgGsharpPressed").css( "opacity", 0);
+            }
+            else if(key.keyCode == 117 || key.keyCode == 85) {
+                $("#imgAsharpPressed").css( "opacity", 0);
+            }
+
+            else if(key.keyCode == 79 || key.keyCode == 111) {
+                $("#imgC2sharpPressed").css( "opacity", 0);
+            }
+            else if(key.keyCode == 80 || key.keyCode == 112) {
+                $("#imgD2sharpPressed").css( "opacity", 0);
+            }
+
+            else if(key.keyCode == 221) {
+                $("#imgF2sharpPressed").css( "opacity", 0);
+            }
+        }
+
+
+
         // $("volSlider").mousemove(function(e){
         //     console.log(e);
         // });
